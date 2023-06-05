@@ -44,6 +44,28 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 45px;
+  position: relative;
+}
+.new-nav {
+  height: auto;
+  width: auto;
+  left: 0;
+  right: 0;
+  padding: 25px 0px;
+  margin-top: 125px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.new-nav ul {
+  display: flex;
+  gap: 10px;
+}
+.new-nav ul li a {
+  color: #4f5665;
+  font-size: 14px;
 }
 nav ul {
   display: flex;
@@ -129,6 +151,12 @@ nav ul li a {
   height: 200px;
   box-shadow: 0px 25px 25px rgba(145, 145, 145, 0.164);
   border-radius: 12px;
+}
+.burger-nav {
+  display: none;
+}
+.solid {
+  font-size: 50px;
 }
 .static {
   display: flex;
@@ -436,6 +464,19 @@ nav ul li a {
   display: flex;
   gap: 20px;
 }
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  padding: 0px;
+}
+
+label input:checked + body {
+  background-color: red;
+}
 
 .left-arrow,
 .right-arrow {
@@ -563,6 +604,13 @@ h3 span {
 }
 
 @media only screen and (max-width: 375px) {
+  footer .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 75px;
+    padding-top: 50px;
+  }
+
   nav {
     display: none;
   }
@@ -589,8 +637,11 @@ h3 span {
   header {
     padding-top: 15px;
     padding-bottom: 15px;
+    gap: 140px;
   }
-
+  .new-nav {
+    justify-self: flex-end;
+  }
   .container {
     padding-left: 25px;
     padding-right: 25px;
@@ -601,11 +652,13 @@ h3 span {
     justify-content: center;
   }
   .illustration_1 {
-    scale: 50%;
+    width: 100%;
   }
   .image {
     justify-content: center;
     align-self: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .hero .content {
     text-align: center;
@@ -615,13 +668,14 @@ h3 span {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 0px 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     gap: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    background-color: transparent;
-    padding: 10px;
-    width: 375px;
-    height: 100px;
+    height: 100%;
+    width: 100%;
+
+    box-shadow: 0px 25px 25px rgba(145, 145, 145, 0);
   }
   .static {
     padding: 15px;
@@ -639,78 +693,87 @@ h3 span {
     width: 40px;
     height: 40px;
     padding: 10px;
+  }
+  .static-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .static-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  .pricing .container {
+    margin-bottom: 50px;
+  }
+  .pricing-cards {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .help {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    gap: 0px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    padding: 50px 25px;
+    text-align: center;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0);
+  }
+  .location p {
+    margin-bottom: 0px;
+  }
+  .location_image {
+    display: none;
+  }
 
-    .features img {
-      scale: 50%;
-    }
+  .sponsors {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .sponsors img {
+    width: 75%;
+    height: auto;
+  }
+  .reviewers-cards {
+    flex-direction: column;
+  }
+  .testimonial {
+    margin-top: 50px;
+  }
+  .testimonial-nav {
+    display: none;
+  }
+  .reviewers-card {
+    width: 320px;
+    height: 260px;
+  }
+  .reviewers-card p {
+    text-align: start;
+  }
 
-    .pricing .container {
-      margin-bottom: 50px;
-    }
-    .pricing-cards {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 50px;
-    }
-    .help {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin: auto;
-      gap: 0px;
-      width: auto;
-      height: auto;
-      border-radius: 12px;
-      padding: 50px 25px;
-      text-align: center;
-    }
-    .location p {
-      margin-bottom: 0px;
-    }
-    .location_image {
-      display: none;
-    }
-
-    .sponsors {
-      display: grid;
-      gap: 15px;
-      grid-template-columns: repeat(5, auto);
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .sponsors img {
-      width: 180%;
-      height: auto;
-    }
-    .reviewers-cards {
-      flex-direction: column;
-    }
-    .testimonial {
-      margin-top: 50px;
-    }
-    .testimonial-nav {
-      display: none;
-    }
-    .reviewers-card {
-      width: 320px;
-      height: 260px;
-    }
-    .reviewers-card p {
-      text-align: start;
-    }
-
-    .laslesvpn_navs {
-      gap: 20px;
-    }
+  .laslesvpn_navs {
+    gap: 20px;
+  }
+  .help {
+    margin: 25px;
+  }
+  .help h2 {
+    font-size: 25px;
+  }
+  .help p {
+    font-size: 14px;
+  }
+  .burger-nav {
+    display: block;
+  }
+  .solid:hover {
+    cursor: pointer;
   }
 }
