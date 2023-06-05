@@ -1,0 +1,716 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+span {
+  font-weight: 500;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  opacity: 0.8;
+}
+br.responsive {
+  display: inline;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+.container {
+  padding: 0 150px;
+}
+header {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  color: #4f5665;
+}
+.sign {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 16px;
+}
+.sign-in-link {
+  color: black;
+  font-weight: 500;
+}
+
+.hero {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-areas:
+    "content image"
+    "statics statics";
+}
+.content {
+  grid-area: content;
+}
+.content h1 {
+  font-size: 50px;
+  line-height: 70px;
+  margin-bottom: 20px;
+}
+.content h2 {
+  font-size: 35px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero_paragraph {
+  font-size: 16px;
+  line-height: 30px;
+  color: #4f5665;
+  margin-bottom: 50px;
+}
+.solid-btn {
+  padding: 22px 77px;
+  font-weight: 500;
+  color: white;
+  background-color: #f53838;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: #f5385448 0px 10px 27px;
+  text-align: center;
+  display: inline-block;
+  transition: 0.3s;
+}
+.solid-btn:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.image {
+  grid-area: image;
+}
+
+.statics {
+  display: flex;
+  grid-area: statics;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 170px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 150px;
+  background-color: white;
+  padding: 72px;
+  width: 1140px;
+  height: 200px;
+  box-shadow: 0px 25px 25px rgba(145, 145, 145, 0.164);
+  border-radius: 12px;
+}
+.static {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.statics-number {
+  font-size: 30px;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.statics-name {
+  font-size: 20px;
+  color: #4f5665;
+  font-weight: 400;
+}
+.vector {
+  width: 60px;
+  height: 60px;
+  background-color: #ffecec;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+}
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 170px;
+  margin-bottom: 80px;
+}
+.Feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4f5665;
+}
+.content_paragraph {
+  font-size: 16px;
+  line-height: 30px;
+  color: #4f5665;
+  margin-bottom: 20px;
+}
+.pricing .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f6f6f6;
+  margin-bottom: 150px;
+  padding-top: 60px;
+}
+.pricing .content h2 {
+  font-size: 35px;
+  font-weight: 500;
+}
+.pricing .content p {
+  font-size: 16px;
+  color: #4f5665;
+  font-weight: 400;
+  margin-bottom: 60px;
+  line-height: 30px;
+}
+.pricing-cards {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.pricing-card {
+  display: grid;
+  justify-content: center;
+  width: 330px;
+  height: 760px;
+  border: 2px solid #dddddd;
+  border-radius: 6px;
+  padding: 45px 20px;
+  transition: 0.3s;
+}
+.pricing-card:hover {
+  border: 2px solid #f53855;
+}
+.left-arrow,
+.right-arrow {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pricing-card img {
+  margin-bottom: 30px;
+}
+.pricing-card h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.first-card .price-features {
+  margin-bottom: 90px;
+}
+.second-card .price-features {
+  margin-bottom: 15px;
+}
+.third-card .price-features {
+  margin-bottom: 15px;
+}
+.price-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  color: #4f5665;
+}
+.price-feature {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+.price-feature img {
+  padding: 0;
+  margin: 0;
+}
+
+.border-btn {
+  width: 177px;
+  height: 45px;
+  border: 1px solid #f53855;
+  background-color: transparent;
+  color: #f53855;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.border-btn:hover {
+  cursor: pointer;
+  background-color: #f53838;
+  color: white;
+}
+.left-arrow:hover {
+  cursor: pointer;
+  background-color: #f53855;
+  color: white;
+}
+.right-arrow:hover {
+  cursor: pointer;
+  background-color: #f53855;
+  color: white;
+}
+
+.third-card .border-btn {
+  font-weight: 500;
+  color: white;
+  background-color: #f53838;
+  border: 0;
+  border-radius: 25px;
+  box-shadow: #f5385448 0px 10px 27px;
+}
+.third-card {
+  border: 2px solid #f53855;
+}
+.reviewers-card:hover {
+  border: 2px solid #f53855;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.location h2 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 45px;
+}
+.location p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4f5665;
+  line-height: 30px;
+  margin-bottom: 150px;
+}
+
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.testimonials h2 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 50px;
+}
+.testimonials p {
+  font-size: 16px;
+  color: #4f5665;
+  margin-bottom: 60px;
+  text-align: center;
+  line-height: 30px;
+}
+.reviewers-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 82px;
+}
+.reviewers-card {
+  border: 2px solid #dddddd;
+  width: 400px;
+  height: 230px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.first-reviewer-card {
+  border: 2px solid #f53838;
+  box-shadow: 0px 25px 25px rgba(168, 166, 166, 0.267);
+}
+.reviewer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.reviewer-info {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.reviewer-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.reviewer-location {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4f5665;
+}
+.reviewers-card p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #0b132a;
+}
+
+.reviewer-rate {
+  display: flex;
+  gap: 5px;
+}
+
+.fa-star {
+  color: #fea250;
+}
+
+.testimonial-nav {
+  display: flex;
+  gap: 1000px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.nav-1 {
+  display: flex;
+  gap: 15px;
+}
+.union {
+  width: 45px;
+  height: 15px;
+  background-color: #f53838;
+  border-radius: 23px;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: #dde0e4;
+  border-radius: 7.5px;
+}
+.nav-2 {
+  display: flex;
+  gap: 20px;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 60px;
+  height: 60px;
+  background-color: #f53855;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.right-arrow {
+  background-color: #f53855;
+  color: white;
+}
+.left-arrow {
+  background-color: white;
+  color: #f53855;
+  border: 2px solid #f53855;
+}
+.fa-light {
+  font-weight: lighter;
+  text-align: center;
+}
+
+.help h2 {
+  color: #0b132a;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.help p {
+  color: #4f5665;
+  font-size: 16px;
+}
+footer {
+  position: relative;
+}
+footer .container {
+  display: flex;
+  gap: 230px;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+.help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -116px;
+  margin: auto;
+  z-index: 1;
+  gap: 350px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.164);
+  width: 1140px;
+  height: 233px;
+  background-color: white;
+  border-radius: 12px;
+}
+footer p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #4f5665;
+  margin-bottom: 30px;
+}
+footer .logo {
+  margin-bottom: 20px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.laslesvpn_navs {
+  display: flex;
+  gap: 130px;
+}
+.laslesvpn_nav ul li {
+  margin-bottom: 10px;
+  color: #4f5665;
+}
+.laslesvpn_nav ul li a {
+  color: #4f5665;
+}
+.laslesvpn_nav h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 33px;
+  height: 33px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.281);
+  background-color: white;
+  transition: 0.3s;
+}
+.social-icon:hover {
+  scale: 110%;
+}
+.brands {
+  color: #f53838;
+}
+.copyright {
+  font-weight: 500;
+  font-size: 16px;
+  color: #afb5c0;
+}
+h3 span {
+  color: #4f5665;
+}
+
+@media only screen and (max-width: 375px) {
+  nav {
+    display: none;
+  }
+  .sign {
+    display: none;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 80px;
+  }
+
+  br.responsive {
+    display: block;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .illustration_1 {
+    scale: 50%;
+  }
+  .image {
+    justify-content: center;
+    align-self: center;
+  }
+  .hero .content {
+    text-align: center;
+  }
+  .statics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    padding: 10px;
+    width: 375px;
+    height: 100px;
+  }
+  .static {
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .statics-number {
+    font-size: 20px;
+  }
+  .statics-name {
+    font-size: 12px;
+  }
+  .vector {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+
+    .static-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .features img {
+      scale: 50%;
+    }
+
+    .pricing .container {
+      margin-bottom: 50px;
+    }
+    .pricing-cards {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+    .help {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: auto;
+      gap: 0px;
+      width: auto;
+      height: auto;
+      border-radius: 12px;
+      padding: 50px 25px;
+      text-align: center;
+    }
+    .location p {
+      margin-bottom: 0px;
+    }
+    .location_image {
+      display: none;
+    }
+
+    .sponsors {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(5, auto);
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sponsors img {
+      width: 180%;
+      height: auto;
+    }
+    .reviewers-cards {
+      flex-direction: column;
+    }
+    .testimonial {
+      margin-top: 50px;
+    }
+    .testimonial-nav {
+      display: none;
+    }
+    .reviewers-card {
+      width: 320px;
+      height: 260px;
+    }
+    .reviewers-card p {
+      text-align: start;
+    }
+
+    .laslesvpn_navs {
+      gap: 20px;
+    }
+  }
+}
