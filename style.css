@@ -57,6 +57,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: block;
+}
+.nav-checkbox {
   display: none;
 }
 .new-nav ul {
@@ -775,5 +778,8 @@ h3 span {
   }
   .solid:hover {
     cursor: pointer;
+  }
+  .nav-checkbox {
+    display: block;
   }
 }
